@@ -51,6 +51,7 @@
 		235D23361E31E32100CBCDA3 /* 添加联系人UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "添加联系人UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		235D233A1E31E32100CBCDA3 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		235D233C1E31E32100CBCDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235D23491E31EB6000CBCDA3 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 				235D232E1E31E32100CBCDA3 /* 添加联系人Tests */,
 				235D23391E31E32100CBCDA3 /* 添加联系人UITests */,
 				235D23131E31E32100CBCDA3 /* Products */,
+				235D23481E31EB6000CBCDA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +140,14 @@
 				235D233C1E31E32100CBCDA3 /* Info.plist */,
 			);
 			path = "添加联系人UITests";
+			sourceTree = "<group>";
+		};
+		235D23481E31EB6000CBCDA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				235D23491E31EB6000CBCDA3 /* ContactsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,9 +435,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "添加联系人/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiatc.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -436,9 +448,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "添加联系人/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiatc.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Gq-tr-Gm5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--添加联系人-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="要保存的手机号码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8w-Gh-D0N">
+                                <rect key="frame" x="24" y="131" width="156" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="TxZ-R2-Gdy"/>
+                                    <constraint firstAttribute="width" constant="156" id="aXV-Zw-jjh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="gNx-vR-DCc"/>
+                                    <constraint firstAttribute="height" constant="21" id="leI-rW-ine"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15637829899" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SR-m3-vvc">
+                                <rect key="frame" x="188" y="131" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Izm-70-Fhl"/>
+                                    <constraint firstAttribute="width" constant="110" id="mAI-Yq-ltT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.24313725489999999" green="0.68627450980000004" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-wG-LND">
+                                <rect key="frame" x="0.0" y="196" width="173" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.87298708176992057" blue="0.60925221304279309" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="jCG-Z4-XWg"/>
+                                    <constraint firstAttribute="height" constant="30" id="oXI-RU-TsD"/>
+                                </constraints>
+                                <state key="normal" title="添加新建联系人"/>
+                                <connections>
+                                    <action selector="addNewPersonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFu-Wr-Bw0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTW-ZN-sO4">
+                                <rect key="frame" x="0.0" y="247" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1HO-jc-5Hz"/>
+                                    <constraint firstAttribute="width" constant="173" id="MMa-Ze-6Wg"/>
+                                </constraints>
+                                <state key="normal" title="添加到现有联系人"/>
+                                <connections>
+                                    <action selector="addToParentPersonClicekd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebg-oi-gbL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9SR-m3-vvc" firstAttribute="leading" secondItem="g8w-Gh-D0N" secondAttribute="trailing" constant="8" id="0yu-Qw-25r"/>
+                            <constraint firstItem="g8w-Gh-D0N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="2Ij-Aa-8n2"/>
+                            <constraint firstItem="2NG-wG-LND" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8bL-mu-V7e"/>
+                            <constraint firstItem="9SR-m3-vvc" firstAttribute="top" secondItem="g8w-Gh-D0N" secondAttribute="top" id="Eez-TO-pe2"/>
+                            <constraint firstItem="gTW-ZN-sO4" firstAttribute="top" secondItem="2NG-wG-LND" secondAttribute="bottom" constant="21" id="YIJ-eh-kou"/>
+                            <constraint firstItem="2NG-wG-LND" firstAttribute="top" secondItem="g8w-Gh-D0N" secondAttribute="bottom" constant="44" id="ZdD-3d-vBT"/>
+                            <constraint firstItem="gTW-ZN-sO4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fga-pI-bs0"/>
+                            <constraint firstItem="g8w-Gh-D0N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="itd-nf-h2P"/>
+                            <constraint firstItem="g8w-Gh-D0N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="tcP-5K-eE2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="添加联系人" id="kAh-d1-cYQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sNO-uY-amg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Gq-tr-Gm5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0h-za-OiE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Twd-7I-lpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhL-AK-15f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
