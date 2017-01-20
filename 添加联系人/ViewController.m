@@ -30,12 +30,16 @@
     
     //获取通讯录权限
     if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined) {
+        //这里会在第一次运行时执行，之后打开应用将不会再执行，权限的判断由后面两个判断语句判断
         ABAddressBookRequestAccessWithCompletion(_addressBook, ^(bool granted, CFErrorRef error){
+            //这里是权限选择后的回调，如果granted为true则表示允许访问
+            
         });
-    }
-    else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized){
-    }
-    else {
+    }else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized){
+        //允许访问通讯录
+    }else {
+        //访问通讯录被拒绝
+
     }
 }
 #pragma mark - 添加新建联系人
